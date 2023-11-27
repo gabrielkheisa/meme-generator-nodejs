@@ -29,8 +29,8 @@ def checkindo():
     return
 
   for x in myresult:
-    user_empty = x[1]
-    text_db = x[4] # Fetch from Teks
+    user_empty = x[2]
+    text_db = x[1] # Fetch from Teks
     print(text_db)
     if (len(user_empty)) <= 1: 
       print("Ok")
@@ -38,19 +38,11 @@ def checkindo():
     else:
       print("User " + user_empty + " kosong, rendering " + str(user_empty))
 
-      text_dbd = str(base64.b64decode(text_db))
+      text_dbd = str(text_db)
 
-      theteks = text_dbd[2:]
+      theteks = text_dbd
       tp = theteks.split(",")
       t1 = textwrap.fill(tp[0].upper(), thesize)
-      t2 = textwrap.fill(tp[1].upper(), thesize)
-      t3 = textwrap.fill(tp[2].upper(), thesize)
-      t4 = textwrap.fill(tp[3].upper(), thesize)
-      t5 = textwrap.fill(tp[4].upper(), thesize)
-      t6 = textwrap.fill(tp[5].upper(), thesize)
-      t7 = textwrap.fill(tp[6].upper(), thesize)
-      t8 = textwrap.fill(tp[7].upper(), thesize)
-      t9 = textwrap.fill(tp[8].upper(), thesize)
       t10 = "10 KETIKA 11"
 
       texts = [t1,t2,t3,t4,t5,t6,t7,t8,t9]
@@ -61,8 +53,8 @@ def checkindo():
       t = 0
       txt_clips = []
 
-      starts =    [0,3,6,9,12,15,20,23,26] # or whatever
-      durations = [3,3,3,3,3,5,3,3,3] 
+      starts =    [0,8] # or whatever
+      durations = [8,0]
 
       for text,t,duration in zip(texts, starts, durations): 
          txt_clip = TextClip(text, fontsize = 40, color='white', font="Roboto Mono", stroke_color="black")
