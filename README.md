@@ -139,14 +139,16 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 ```
-### 6. Install Python, video renderer, and all of the requirements
+### 6. Install Python, video renderer, NPM, and all of the requirements
 For video renderer purposes:
 ```bash
+apk add --no-cache python3 py3-pip
 apk add make automake gcc g++ subversion python3-dev
 apk add ffmpeg
 pip3 install --upgrade pip
 pip3 install mysql-connector-python==8.0.29
 pip3 install python-dotenv
+apk add npm
 ```
 ### 7.  Install Node.js Development or Production Tools
 In this case, for development only, use nodemon, else use pm2:
@@ -170,6 +172,10 @@ apk add screen
 Create a screen session for npm:
 ```bash
 screen
+```
+Install dependencis:
+```bash
+npm install
 ```
 Run the application using npm:
 ```bash
