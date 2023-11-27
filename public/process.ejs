@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Processing...</title>
+</head>
+<body>
+    <h1>Processing...</h1>
+    <br>
+    <h2 id="check"><%- value %></h2>
+  </body>
+  <script>
+    async function fetchData() {
+      try {
+        const response = await fetch('/check');
+        const data = await response.text();
+        const dataContainer = document.getElementById('check');
+        dataContainer.innerHTML = data;
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    setInterval(fetchData, 1000);
+  </script>
+</html>

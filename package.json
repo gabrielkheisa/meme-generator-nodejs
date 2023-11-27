@@ -1,0 +1,22 @@
+{
+  "name": "meme-generator-nodejs",
+  "version": "1.0.0",
+  "description": "meme.gabrielkheisa.xyz rewrite on NodeJS",
+  "author": "Gabriel Kheisa",
+  "license": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": ">=2.5.0",
+    "crypto": "^1.0.1",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.2.9" 
+  }
+}
