@@ -4,16 +4,8 @@ This repository contains a previous <a href="https://github.com/gabrielkheisa/me
 
 ## Getting Started
 
-### 1. Clone the Repository
-Clone this repository to your local machine:
-
-```bash
-git clone https://repo.gabrielkheisa.xyz/gabrielkheisa/meme-generator-nodejs.git
-cd meme-generator-nodejs
-```
-
-### 2. Explore docker-compose.yml
-Take a look at the docker-compose.yml file to understand the services and configurations defined for Docker. Create a Docker external network "meme-generator-net".
+### 1. Explore docker-compose.yml
+Take a look at the docker-compose.yml file to understand the services and configurations defined for Docker or create a Docker external network "meme-generator-net" or create a <b>docker-compose.yml</b> file and copy this configuration:
 
 ```yml
 # ./docker-compose.yml
@@ -50,11 +42,20 @@ services:
 volumes:
   db_data: {}
 ```
-### 3. Run the Docker container
+### 2. Run the Docker container
 Run the container using Docker Compose:
 ```bash
 docker-compose up -d
 ```
+
+### 3. Clone the Repository
+Clone this repository to your local machine:
+
+```bash
+git clone https://repo.gabrielkheisa.xyz/gabrielkheisa/meme-generator-nodejs.git
+cd meme-generator-nodejs
+```
+
 ### 4. Bash into the Container
 Access the container's terminal/bash, look for it using "docker ps":
 ```bash
