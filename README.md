@@ -1,6 +1,6 @@
 # Meme generator rewritten on Node.js
 
-This repository contains a previous LEMP stack meme generator, rewritten on Node.js along with necessary steps to set up and run the app.
+This repository contains a previous <a href="https://github.com/gabrielkheisa/meme-generator">LEMP stack meme generator</a>, rewritten on Node.js along with necessary steps to set up and run the app.
 
 ## Getting Started
 
