@@ -13,10 +13,12 @@ services:
     container_name: memegenerator
     volumes:
       # app source code
-      - ./html:/var/www/html
+      - ./meme-generator-nodejs:/var/www/html
       # db data persistence
       # Here you can also volume php ini settings
       # - /path/to/zz-overrides:/usr/local/etc/php/conf.d/zz-overrides.ini
+    ports:
+      - 3000:3000
     environment:
       MYSQL_ROOT_PASSWORD: supersecurepwd
       MYSQL_DATABASE: appdb
@@ -27,16 +29,6 @@ services:
       - "meme-generator-net"
     restart: always
 
-    
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin_memegenerator
-    restart: always
-    environment:
-      - PMA_HOST=app
-      - PMA_PORT=3306
-    networks:
-      - "meme-generator-net"
 
 volumes:
   db_data: {}
