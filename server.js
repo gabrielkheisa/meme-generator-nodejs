@@ -79,7 +79,7 @@ app.post('/process', (req, res) => {
     sessionCookie = "";
     return res.status(400).send(`Don't tamper the cookie, please return to <a href="/">home</a>`);
   }
-  const text1 = sanitizeInput(req.body.text1);
+  const text1 = sanitizeInput(req.body.text1).slice(0, 120);
   const text_session = String(sessionCookie);
 
   const sql = 'INSERT INTO meme_ronaldo (text, value) VALUES (?, ?)';
