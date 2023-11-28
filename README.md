@@ -196,6 +196,6 @@ Detach from the screen, using <b>CTRL + A</b> then <b>CTRL + D</b>
 ###  11. Access the Server Endpoint
 Navigate to http://localhost:3000 or the configured endpoint in your browser to access the server.
 
-### Additional Notes:
+## Additional Notes:
 - Modify configurations in docker-compose.yml for custom setups.
 - Ensure proper permissions and access rights when running docker commands.
